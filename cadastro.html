@@ -12,66 +12,134 @@
 </head>
 
 <body class="container">
-   
-    <h1>Cadastro de viajantes</h1>
-    <form action="#" method="post" enctype="multipart/form-data">
-        <!-- Dados pessoais -->
-        <fieldset class="form-control mb-3">
-            <legend>Dados Pessoais</legend>
-            <label for="nome">Nome Completo</label>
-            <input type="text" name="nome" id="nome" placeholder="Digite seu nome"
-                title="Digite seu nome completo sem abreviações" class="form-control" required>
-            <label for="idade">idade</label>
-            <input type="number" name="idade" id="idade" class="form-control" placeholder="Digite sua idade" onchange="verificarIdade()" required>
-        </fieldset>
-        <fieldset class="form-control mb-3">
-            <legend>Contato</legend>
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" class="form-control" required>
-            <label for="telefone">Telefone</label>
-            <input type="tel" name="telefone" id="telefone" class="form-control" placeholder="(21)99999-9999"
-                pattern="^\(\d{2}\1\)d{5}-\d{4}$" title="Formato:(21)99999-9999">
-        </fieldset>
-        <fieldset class="form control mb-3">
-            <legend>Preferência de viagens</legend>
-            <label for="destino">Destino</label>
-            <input type="text" name="destino" id="destino" class="form-control" placeholder="Ex: Paris, NY, istanbul">
-            <label for="tipo">Tipo</label>
-            <select name="tipo" id="tipo" class="form-control">
-                <option value="praia">Praia</option>
-                <option value="aventura">Aventura</option>
-                <option value="romantico">Romântico</option>
-                <option value="cultural">Cultural</option>
-            </select>
-            <label for="dataIda">Data de ida</label>
-            <input type="date" name="dataIda" id="dataIda" class="form-control">
-            <label for="dataVolta">Data de volta</label>
-            <input type="date" name="dataVolta" id="dataVolta" class="form-control">
-            <p>Deseja receber promoções de viagem?</p>
-            <input type="radio" name="promo" id="sim" value="sim"><label for="sim">Sim</label>
-            <input type="radio" name="promo" id="nao" value="nao"><label for="nao">Não</label>
-        </fieldset>
-        <fieldset class="form-control mb-3">
-            <legend>Outros</legend>
-            <label for="passaporte">Upload de passaporte (opcional)</label>
-            <input type="file" name="passaporte" id="passaporte" class="form-control">
-            <label for="cor">Cor favorita para tema de viagem</label>
-            <input type="color" name="cor" id="cor" class="form-control">
-            <p>Hobbies</p>
-            <input type="checkbox" name="hobbies1" id="revista">
-            <label for="revista">Revista</label><br>
-            <input type="checkbox" name="hobbies2" id="jornal">
-            <label for="jornal">Jornal</label>
+    <header class="fixed-top">
+        <div class="header">
+            <h1>Jornada Viagens</h1>
+            <p>Explorando o mundo com você!✈️🌍</p>
+        </div>
 
-        </fieldset>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Menu de Opções</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.umviajante.com.br/" target="_blank">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pacotes.html">Pacote de viagens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown link
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Cadastro</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main style="margin-top: 200px;">
+        <h1>Cadastro de viajantes</h1>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <!-- Dados pessoais -->
+            <fieldset class="form-control mb-3">
+                <legend>Dados Pessoais</legend>
+                <label for="nome">Nome Completo</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome"
+                    title="Digite seu nome completo sem abreviações" class="form-control" required>
+                <label for="idade">idade</label>
+                <input type="number" name="idade" id="idade" class="form-control" placeholder="Digite sua idade"
+                    onchange="verificarIdade()" required>
+            </fieldset>
+            <fieldset class="form-control mb-3">
+                <legend>Contato</legend>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="exemplo@gmail.com" class="form-control"
+                    required>
+                <label for="telefone">Telefone</label>
+                <input type="tel" name="telefone" id="telefone" class="form-control" placeholder="(21)99999-9999"
+                    pattern="^\(\d{2}\1\)d{5}-\d{4}$" title="Formato:(21)99999-9999">
+            </fieldset>
+            <fieldset class="form control mb-3">
+                <legend>Preferência de viagens</legend>
+                <label for="destino">Destino</label>
+                <input type="text" name="destino" id="destino" class="form-control"
+                    placeholder="Ex: Paris, NY, istanbul">
+                <label for="tipo">Tipo</label>
+                <select name="tipo" id="tipo" class="form-control">
+                    <option value="praia">Praia</option>
+                    <option value="aventura">Aventura</option>
+                    <option value="romantico">Romântico</option>
+                    <option value="cultural">Cultural</option>
+                </select>
+                <label for="dataIda">Data de ida</label>
+                <input type="date" name="dataIda" id="dataIda" class="form-control">
+                <label for="dataVolta">Data de volta</label>
+                <input type="date" name="dataVolta" id="dataVolta" class="form-control">
+                <p>Deseja receber promoções de viagem?</p>
+                <input type="radio" name="promo" id="sim" value="sim"><label for="sim">Sim</label>
+                <input type="radio" name="promo" id="nao" value="nao"><label for="nao">Não</label>
+            </fieldset>
+            <fieldset class="form-control mb-3">
+                <legend>Outros</legend>
+                <label for="passaporte">Upload de passaporte (opcional)</label>
+                <input type="file" name="passaporte" id="passaporte" class="form-control">
+                <label for="cor">Cor favorita para tema de viagem</label>
+                <input type="color" name="cor" id="cor" class="form-control">
+                <p>Hobbies</p>
+                <input type="checkbox" name="hobbies1" id="revista">
+                <label for="revista">Revista</label><br>
+                <input type="checkbox" name="hobbies2" id="jornal">
+                <label for="jornal">Jornal</label>
 
-        <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
-        <button class="btn btn-outline-danger" type="reset">Limpar</button>
-    </form>
+            </fieldset>
+
+            <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+            <button class="btn btn-outline-danger" type="reset">Limpar</button>
+        </form>
+    </main>
+    <footer>
+        <!-- rodapé da página -->
+        <div class="footer-container">
+            <div class="footer-copy">
+                <p>&copy; 2026 Jornada Viagens. Todos os direitos reservados</p>
+            </div>
+            <!-- criar uma ancora de link -->
+            <a name="contato"></a>
+            <address class="footer-contato">
+                <h2>Contato</h2>
+                <p>Email: contato@jornadaviagens.com.br
+                <p>Tel/WhatsApp: (21)91234-1234
+            </address>
+            <nav class="footer-redes" aria-label="Redes Sociais">
+                <a href="https://pt-br.facebook.com/" target="_blank" aria-label="facebook"><img
+                        src="img/facebook-icon.png"></a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="instagram"><img
+                        src="img/instagram-icon.png"></a>
+                <a href="https://x.com/" target="_blank" aria-label="x"><img src="img/x-icon.avif"></a>
+            </nav>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script> 
-        <script src="js/script.js"></script>
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
