@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:mso="urn:schemas-microsoft-com:office:office"
+    xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada Viagens</title>
+    <!-- Configuração do css externo -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="fixed-top">
+        <div class="header">
+            <h1>Jornada Viagens</h1>
+            <p>Explorando o mundo com você!✈️🌍</p>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Menu de Opções</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.umviajante.com.br/" target="_blank">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pacotes.html">Pacote de viagens</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown link
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main style="margin-top: 200px;">
+        <!-- area principal da página -->
+        <section id="sobre">
+            <h2>Sobre nós</h2>
+            <p>
+                Somos uma agência apaixonada por criar viagens inesquecíveis...
+            </p>
+        </section>
+        <section id="pacotes">
+            <h2>Ofertas da Semana</h2>
+            <article id="japao" class="pacote">
+                <h3>Japão</h3>
+                <figure>
+                    <img src="img/japao.jpg" alt="pacote de viagem para o Japão" width="300" height="170">
+                    <figcaption>Japão uma cidade oriental</figcaption>
+                </figure>
+                <p><strong>Hotel + Aéreo</strong></p>
+                <p class="preco"> R$ 4000 </p>
+            </article>
+            <article id="sanandreas" class="pacote">
+                <h3>San Andreas</h3>
+                <figure>
+                    <img src="img/sanandreas.jpg" alt="pacote de viagem para o San Andreas" width="300">
+                </figure>
+                <p><strong>Hotel + Aéreo</strong></p>
+                <p class="preco">R$ 3000</p>
+            </article>
+            <article id="paraiba" class="pacote">
+                <h3 class="texto">Paraíba</h3>
+                <figure>
+                    <img src="img/paraiba.jpg" alt="pacote de viagem para o Paraíba" width="300">
+                </figure>
+                <p><strong>Hotel + Aéreo</strong></p>
+                <p class="preco">R$ 6000</p>
+            </article>
+            <!--
+            <ul type="circle">  square / circle / disk(padrão)
+                <li>Japão - Hotel + Aéreo R$ 4000</li>
+                <li>San Andreas - Hotel + Aéreo R$ 3000</li>
+                <li>Paraíba - Hotel + Aéreo R$ 6000</li>
+            </ul> -->
+            <h2>Opções de Outono</h2>
+            <!-- lista ordenada ou lista numerada -->
+            <ol>
+                <!-- type a, A, 1, i, I / start -->
+                <li>Gramado - RS</li>
+                <li>Canela - RS</li>
+                <li>Miguel Pereira - RJ</li>
+            </ol>
+        </section>
+        <section id="midia">
+            <h2>Curta novas aventuras</h2>
+            <video controls width="320" height="240" loop>
+                <source src="videos/estrada.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos
+            </video>
+            <audio controls loop>
+                <source src="audios/rock.mp3" type="audio/mp3">
+                Seu navegador não suporta audios
+            </audio>
+        </section>
+
+    </main>
+    <aside class="mapa">
+        <h3>Onde estamos</h3>
+        <div class="mapa-conteudo">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.2633222822888!2d-43.4532482242322!3d-22.75560707936174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9967a99225f96f%3A0xec20bfc8ff090b46!2sSenac%20Nova%20Igua%C3%A7u!5e0!3m2!1spt-BR!2sbr!4v1775515084557!5m2!1spt-BR!2sbr"
+                width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <address>
+                Rua Exemplo, 123<br>
+                Bairro: Centro<br>
+                Nova Iguaçu<br>
+                Rio de Janeiro<br>
+                Cep: 26.000-000
+            </address>
+        </div>
+    </aside>
+    <footer>
+        <!-- rodapé da página -->
+        <div class="footer-container">
+            <div class="footer-copy">
+                <p>&copy; 2026 Jornada Viagens. Todos os direitos reservados</p>
+            </div>
+            <!-- criar uma ancora de link -->
+            <a name="contato"></a>
+            <address class="footer-contato">
+                <h2>Contato</h2>
+                <p>Email: contato@jornadaviagens.com.br
+                <p>Tel/WhatsApp: (21)91234-1234
+            </address>
+            <nav class="footer-redes" aria-label="Redes Sociais">
+                <a href="https://pt-br.facebook.com/" target="_blank" aria-label="facebook"><img
+                        src="img/facebook-icon.png"></a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="instagram"><img
+                        src="img/instagram-icon.png"></a>
+                <a href="https://x.com/" target="_blank" aria-label="x"><img src="img/x-icon.avif"></a>
+            </nav>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
