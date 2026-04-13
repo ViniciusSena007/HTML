@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="icon" href="img/logo.png">
     <title>Formulário de Cadastro</title>
 </head>
 
-<body class="container">
+<body>
     <header class="fixed-top">
         <div class="header">
             <h1>Jornada Viagens</h1>
@@ -43,7 +44,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Dropdown link
+                                Formularios
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Cadastro</a></li>
@@ -54,9 +55,9 @@
             </div>
         </nav>
     </header>
-    <main style="margin-top: 200px;">
+    <main style="margin-top: 200px;"  class="container">
         <h1>Cadastro de viajantes</h1>
-        <form action="#" method="post" enctype="multipart/form-data">
+        <form action="#" onsubmit="enviarFormulario(event)" method="get" enctype="multipart/form-data">
             <!-- Dados pessoais -->
             <fieldset class="form-control mb-3">
                 <legend>Dados Pessoais</legend>
@@ -113,6 +114,7 @@
             <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
             <button class="btn btn-outline-danger" type="reset">Limpar</button>
         </form>
+        <div id="resultado"></div>
     </main>
     <footer>
         <!-- rodapé da página -->
