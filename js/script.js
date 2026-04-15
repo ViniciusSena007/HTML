@@ -5,6 +5,40 @@ function verificarIdade() {
         alert("Para viajar sozinho. é nescessário ser maior de idade")
     }
 }
+async function buscarCep() {
+    // receber o valor digitado no input do CEP
+
+    let cep = document.getElementById("cep").value;
+    cep = cep.replace(/\D/g, "")
+
+    if (cep.length !== 8) {
+        document.getElementById("mensagem").textContent = "CEP Inválido";
+        return;
+    }
+
+    try {
+        //Faz a requisição para a api do ViaCEP
+        let resposta = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+        // Converter a resposta o viacep para o json
+        let dados = await resposta.json();
+        //Verificar se o cep não foi encontrado
+        if (dados.erro) {
+            document.getElementById("mensagem").textContent = "CEP não encontrado";
+        }
+
+        // preencher os campos do formulario
+
+        document.getElementById("logradouro").value = dados.logradouro;
+        document.getElementById("bairro").value = dados.bairro;
+        document.getElementById("cidade").value = dados.localidade;
+        document.getElementById("uf").value = dados.uf;
+
+        document.getElementById("mensagem").textContent = "Endereço encontrado com sucesso";
+    } catch (erro) {
+        document.getElementById("mensagem").textContent = "Erro ao buscar CEP";
+    }
+
+}
 
 function enviarFormulario(event) {
 
