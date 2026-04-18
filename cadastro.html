@@ -55,7 +55,7 @@
             </div>
         </nav>
     </header>
-    <main style="margin-top: 200px;" class="container">
+    <main class="container main-content">
         <h1>Cadastro de viajantes</h1>
         <form action="#" onsubmit="enviarFormulario(event)" method="get" enctype="multipart/form-data">
             <!-- Dados pessoais -->
@@ -64,15 +64,15 @@
                 <label for="nome">Nome Completo</label>
                 <input type="text" name="nome" id="nome" placeholder="Digite seu nome"
                     title="Digite seu nome completo sem abreviações" class="form-control" required>
-                <label for="idade">idade</label>
+                <label for="idade">Idade</label>
                 <input type="number" name="idade" id="idade" class="form-control" placeholder="Digite sua idade"
                     onchange="verificarIdade()" required>
 
                 <label for="cep">CEP</label>
                 <input type="text" name="cep" id="cep" title="Digite seu cep" placeholder="Digite seu CEP"
                     class="form-control" required>
-                    <button type="button" onclick="buscarCep()" class="btn btn-outline-warning btn-sm">Buscar</button>
-                    <br>
+                <button type="button" onclick="buscarCep()" class="btn btn-outline-warning btn-sm">Buscar</button>
+                <br>
 
                 <label for="logradouro">Logradouro</label>
                 <input type="text" name="logradouro" id="logradouro" title="Digite seu logradouro"
@@ -89,7 +89,7 @@
                 <label for="uf">UF (Estado)</label>
                 <input type="text" name="uf" id="uf" title="Digite sua UF" placeholder="Digite sua UF"
                     class="form-control" required>
-                    <p class="paragrafo" id="mensagem"></p>
+                <p class="paragrafo" id="mensagem"></p>
             </fieldset>
             <fieldset class="form-control mb-3">
                 <legend>Contato</legend>
@@ -98,39 +98,52 @@
                     required>
                 <label for="telefone">Telefone</label>
                 <input type="tel" name="telefone" id="telefone" class="form-control" placeholder="(21)99999-9999"
-                    pattern="^\(\d{2}\1\)d{5}-\d{4}$" title="Formato:(21)99999-9999">
+                    pattern="\(\d{2}\)9\d{4}-\d{4}" title="Formato:(21)99999-9999" required>
             </fieldset>
-            <fieldset class="form control mb-3">
+            <fieldset class="form-control mb-3">
                 <legend>Preferência de viagens</legend>
                 <label for="destino">Destino</label>
                 <input type="text" name="destino" id="destino" class="form-control"
-                    placeholder="Ex: Paris, NY, istanbul">
+                    placeholder="Ex: Paris, NY, Istanbul" required>
                 <label for="tipo">Tipo</label>
-                <select name="tipo" id="tipo" class="form-control">
+                <select name="tipo" id="tipo" class="form-control" required>
+                    <option value="">Selecione uma opção</option>
                     <option value="praia">Praia</option>
                     <option value="aventura">Aventura</option>
                     <option value="romantico">Romântico</option>
                     <option value="cultural">Cultural</option>
                 </select>
                 <label for="dataIda">Data de ida</label>
-                <input type="date" name="dataIda" id="dataIda" class="form-control">
+                <input type="date" name="dataIda" id="dataIda" class="form-control" required>
                 <label for="dataVolta">Data de volta</label>
-                <input type="date" name="dataVolta" id="dataVolta" class="form-control">
+                <input type="date" name="dataVolta" id="dataVolta" class="form-control" required>
                 <p>Deseja receber promoções de viagem?</p>
-                <input type="radio" name="promo" id="sim" value="sim"><label for="sim">Sim</label>
-                <input type="radio" name="promo" id="nao" value="nao"><label for="nao">Não</label>
+                <input type="radio" name="promo" id="sim" value="sim" required>
+                <label for="sim">Sim</label>
+                <input type="radio" name="promo" id="nao" value="nao" required>
+                <label for="nao">Não</label>
+
+
+                <p class="text-danger small" id="erroData"></p>
             </fieldset>
             <fieldset class="form-control mb-3">
                 <legend>Outros</legend>
-                <label for="passaporte">Upload de passaporte (opcional)</label>
-                <input type="file" name="passaporte" id="passaporte" class="form-control">
                 <label for="cor">Cor favorita para tema de viagem</label>
                 <input type="color" name="cor" id="cor" class="form-control">
-                <p>Hobbies</p>
-                <input type="checkbox" name="hobbies1" id="revista">
-                <label for="revista">Revista</label><br>
+                <p><strong>Hobbies</strong></p>
+                <input type="checkbox" name="hobbies" id="fotografia" value="fotografia">
+                <label for="fotografia">Fotografia</label><br>
+                <input type="checkbox" name="hobbies" id="culinaria" value="culinaria">
+                <label for="culinaria">Culinária</label><br>
+                <input type="checkbox" name="hobbies" id="natureza" value="natureza">
+                <label for="natureza">Natureza</label><br>
+                <input type="checkbox" name="hobbies" id="esportes" value="esportes">
+                <label for="esportes">Esportes</label><br>
+                <input type="checkbox" name="hobbies" id="cultura" value="cultura">
+                <label for="cultura">Cultura</label>
                 <input type="checkbox" name="hobbies2" id="jornal">
                 <label for="jornal">Jornal</label>
+                <input type="checkbox" name="hobbies2" id="leitura">
 
             </fieldset>
 

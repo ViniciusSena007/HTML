@@ -65,45 +65,69 @@
             </p>
         </section>
         <section id="pacotes">
-            <h2>Ofertas da Semana</h2>
-            <article id="japao" class="pacote">
-                <h3>Japão</h3>
-                <figure>
-                    <img src="img/japao.jpg" alt="pacote de viagem para o Japão" width="300" height="170">
-                    <figcaption>Japão uma cidade oriental</figcaption>
-                </figure>
-                <p><strong>Hotel + Aéreo</strong></p>
-                <p class="preco"> R$ 4000 </p>
-            </article>
-            <article id="sanandreas" class="pacote">
-                <h3>San Andreas</h3>
-                <figure>
-                    <img src="img/sanandreas.jpg" alt="pacote de viagem para o San Andreas" width="300">
-                </figure>
-                <p><strong>Hotel + Aéreo</strong></p>
-                <p class="preco">R$ 3000</p>
-            </article>
-            <article id="paraiba" class="pacote">
-                <h3 class="texto">Paraíba</h3>
-                <figure>
-                    <img src="img/paraiba.jpg" alt="pacote de viagem para o Paraíba" width="300">
-                </figure>
-                <p><strong>Hotel + Aéreo</strong></p>
-                <p class="preco">R$ 6000</p>
-            </article>
-            <!--
-            <ul type="circle">  square / circle / disk(padrão)
-                <li>Japão - Hotel + Aéreo R$ 4000</li>
-                <li>San Andreas - Hotel + Aéreo R$ 3000</li>
-                <li>Paraíba - Hotel + Aéreo R$ 6000</li>
-            </ul> -->
-            <h2>Opções de Outono</h2>
-            <!-- lista ordenada ou lista numerada -->
-            <ol>
-                <!-- type a, A, 1, i, I / start -->
-                <li>Gramado - RS</li>
-                <li>Canela - RS</li>
-                <li>Miguel Pereira - RJ</li>
+            <div class="center">
+                <h2>Ofertas da semana</h2>
+            </div>
+
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-container class=carousel-inner">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <figure>
+                                <img src="img/japao.jpg" alt="..." width="640" height="360px">
+                            </figure>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Japão</h5>
+                                <p><strong>Hotel + Aéreo</strong></p>
+                                <p class="preco"> R$ 4000 </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <figure>
+                                <img src="img/sanandreas.jpg" alt="...">
+                            </figure>
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>San Andreas</h5>
+                                <p><strong>Hotel + Aéreo</strong></p>
+                                <p class="preco"> R$ 3000 </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <figure>
+                                <img src="img/paraiba.jpg" alt="...">
+                            </figure>
+
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Paraíba</h5>
+                                <p><strong>Hotel + Aéreo</strong></p>
+                                <p class="preco"> R$ 6000 </p>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <li>Gramado - RS</li>
+            <li>Canela - RS</li>
+            <li>Miguel Pereira - RJ</li>
             </ol>
         </section>
         <section id="midia">
